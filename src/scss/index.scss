@@ -1,0 +1,71 @@
+$white: white;
+$light-gray: #f0f0f0;
+$dark-gray: #6c6c6c;
+$black: #1e1e1e;
+$yellow: #f99c14;
+
+.App{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "dis dis dis dis"
+    "clear clear divide multiply"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equals"
+    "zero zero decimal equals";
+
+  #display { 
+    
+    text-align: right;
+    grid-area: dis;
+    #answer {
+      font-size: 48px;
+      height: 48px;
+    }
+    
+    #expression {
+      font-size: 30px;
+      height: 30px;
+      color: $dark-gray;
+    }
+    
+   
+  }
+  #clear{
+   
+    text-align: center;
+    grid-area: clear;
+  }
+  #zero {
+   
+    text-align: center;
+    grid-area: zero;
+
+  }
+  #equals {
+
+    grid-area: equals;
+  }
+
+}
+
+.calculator > * {
+  border: 1px solid black;
+  padding: 10px;
+  }
+
+
+
+
+// .row {
+//   grid-column: 1/ -1;
+// }
