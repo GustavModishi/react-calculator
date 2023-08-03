@@ -7,31 +7,72 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "dis dis dis dis" "clear clear divide multiply" "seven eight nine minus" "four five six plus" "one two three equals" "zero zero decimal equals";
+  grid-template-areas: "dis dis dis dis" "clear neg divide multiply" "seven eight nine minus" "four five six plus" "one two three equals" "zero zero decimal equals";
+  grid-template-columns: 100px 100px 100px 100px;
+  gap: 20px;
+  padding: 50px;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: #6c6c6c;
+}
+.calculator .number, .calculator .sign, .calculator .AC, .calculator .decimal {
+  height: 50px;
+  font-size: 30px;
+  border: brown solid;
+  cursor: pointer;
+  border-radius: 100px;
+  width: 100%;
+  transition: transform 0.1s ease-in-out;
+  text-align: center;
+  justify-content: center;
+}
+.calculator .number :active {
+  transform: scale(0.95);
 }
 .calculator #display {
   text-align: right;
   grid-area: dis;
 }
-.calculator #display #answer {
+.calculator #display #input {
   font-size: 48px;
   height: 48px;
 }
-.calculator #display #expression {
+.calculator #display #output {
   font-size: 30px;
   height: 30px;
-  color: #6c6c6c;
+  color: #f99c14;
 }
 .calculator #clear {
   text-align: center;
   grid-area: clear;
+}
+.calculator #negative {
+  height: 50px;
+  font-size: 30px;
+  border: brown solid;
+  cursor: pointer;
+  border-radius: 100px;
+  width: 100%;
+  transition: transform 0.1s ease-in-out;
+  text-align: center;
+  justify-content: center;
 }
 .calculator #zero {
   text-align: center;
   grid-area: zero;
 }
 .calculator #equals {
+  height: 50px;
+  font-size: 30px;
+  border: brown solid;
+  cursor: pointer;
+  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.1s ease-in-out;
   grid-area: equals;
+  text-align: center;
 }
 
 .calculator > * {
